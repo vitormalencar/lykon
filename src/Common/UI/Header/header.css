@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    z-index: 50;
+}
+
+.header {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0 16px;
+    font-size: 20px;
+    line-height: 56px;
+    font-weight: 400;
+    color: #f5785a;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+.button {
+    background-color: #f5785a;
+    border: .1rem solid #f5785a;
+    border-radius: .1rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    line-height: 3.8rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.button.button-block {
+    display: block;
+    width: 100%;
+}
+
+.button[disabled],
+button[disabled],
+input[type='button'][disabled],
+input[type='reset'][disabled],
+input[type='submit'][disabled] {
+    cursor: default;
+    opacity: .5;
+}
