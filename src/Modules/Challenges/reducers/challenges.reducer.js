@@ -1,4 +1,3 @@
-// @flow
 import { createSelector } from 'reselect'
 
 import { FETCH_CHALLENGES_REQUEST, FETCH_CHALLENGES_SUCCESS } from '../actions/index'
