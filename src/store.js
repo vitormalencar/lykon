@@ -8,7 +8,6 @@ import { fetchChallenges } from './Modules/Challenges/actions/index'
 import { loadState, saveState } from './Common/Utils/persistency'
 
 // Preloaded Reducers
-import { reducer as profile } from './Modules/Profile/index'
 import { reducer as challenges } from './Modules/Challenges/index'
 
 
