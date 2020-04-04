@@ -4,9 +4,8 @@ import {
   FETCH_CHALLENGE_REQUEST,
   FETCH_CHALLENGE_SUCCESS,
   UPDATE_CHALLENGE_REQUEST,
-  UPDATE_CHALLENGE_SUCCESS
+  UPDATE_CHALLENGE_SUCCESS,
 } from '../actions/index'
-
 
 // Root Selector
 export const getRoot = (state) => state
@@ -29,21 +28,21 @@ export const getCurrentChallenge = createSelector(
 const initialState = {
   loading: true,
   currentChallenge: {
-    type: "",
-    id: "",
+    type: '',
+    id: '',
     complete: false,
     attributes: {
-      title: "",
-      group: "",
-      introduction: "",
+      title: '',
+      group: '',
+      introduction: '',
       extra: {
-        url: "",
-        image: ""
+        url: '',
+        image: '',
       },
       points: 0,
-      tags: []
-    }
-  }
+      tags: [],
+    },
+  },
 }
 
 const challengeReducer = (state = initialState, action) => {
@@ -51,13 +50,13 @@ const challengeReducer = (state = initialState, action) => {
     case FETCH_CHALLENGE_REQUEST:
       return {
         ...state,
-        loading: true
+        loading: true,
       }
     case FETCH_CHALLENGE_SUCCESS:
       return {
         ...state,
         currentChallenge: action.payload,
-        loading: false
+        loading: false,
       }
 
     case UPDATE_CHALLENGE_REQUEST:
@@ -67,23 +66,21 @@ const challengeReducer = (state = initialState, action) => {
           ...state.currentChallenge,
           attributes: {
             ...state.currentChallenge.attributes,
-            complete: true
-          }
-        }
+            complete: true,
+          },
+        },
       }
 
     case UPDATE_CHALLENGE_SUCCESS:
       return {
         ...state,
         currentChallenge: {
-          ...action.payload
-        }
-
+          ...action.payload,
+        },
       }
     default:
       return state
   }
 }
-
 
 export default challengeReducer

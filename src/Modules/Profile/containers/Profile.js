@@ -7,11 +7,11 @@ import { getUserReward } from '../../../Common/Utils/selectors'
 const mapStateToProps = (state) => ({
   loading: getLoadingState(state),
   user: getCurrentUser(state),
-  userReward: getUserReward(state)
+  userReward: getUserReward(state),
 })
 
 const mapDispatchToProps = {
-  fetchUser
+  fetchUser,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile)

@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router";
-import Loader from "../../../Common/UI/Loader/Loader";
-import Button from "../../../Common/UI/Button/Button";
+import React, { Component } from 'react'
+import { withRouter } from 'react-router'
+import Loader from '../../../Common/UI/Loader/Loader'
+import Button from '../../../Common/UI/Button/Button'
 
 class Profile extends Component {
   componentDidMount() {
-    this.props.fetchUser();
+    this.props.fetchUser()
   }
 
   render() {
-    const { user, loading, userReward } = this.props;
-    const attributes = user.attributes || null;
+    const { user, loading, userReward } = this.props
+    const attributes = user.attributes || null
 
     if (loading || !attributes) {
-      return <Loader />;
+      return <Loader />
     }
 
     return (
@@ -31,14 +31,14 @@ class Profile extends Component {
           <div>
             <p> CONGRATULATIONS YOU HAVE COMPLETE ALL YOUR CHALLENGES !</p>
             <br />
-            <Button onClick={() => alert("🎉🎉🎉")}>
+            <Button onClick={() => alert('🎉🎉🎉')}>
               Click here to get your prize
             </Button>
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
-export default withRouter(Profile);
+export default withRouter(Profile)
