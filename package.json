@@ -2,25 +2,6 @@
   "name": "lykon",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "lodash.throttle": "^4.1.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy-staging": "npm run build && surge ./build -d staging-lykon.surge.sh"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -32,5 +13,34 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "husky": "^4.2.3",
+    "lodash.throttle": "^4.1.1",
+    "pretty-quick": "^2.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "deploy-staging": "npm run build && surge ./build -d staging-lykon.surge.sh",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "devDependencies": {
+    "prettier": "2.0.2"
   }
 }

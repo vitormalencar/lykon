@@ -5,11 +5,11 @@ import Challenges from '../components/Challenges'
 import { getChallenges } from '../reducers/challenges.reducer'
 
 const mapStateToProps = (state) => ({
-  challenges: getChallenges(state)
+  challenges: getChallenges(state),
 })
 
 const mapDispatchToProps = {
-  fetchChallenges
+  fetchChallenges,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Challenges)

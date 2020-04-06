@@ -10,11 +10,11 @@ export default class Challenges extends Component {
     const { challenges } = this.props
     return (
       <div>
-        {challenges.map((challenge, i) =>
+        {challenges.map((challenge, i) => (
           <Link key={i} to={`/challenge/${challenge.id}`}>
-            <Card  {...challenge.attributes} />
+            <Card {...challenge.attributes} />
           </Link>
-        )}
+        ))}
       </div>
     )
   }

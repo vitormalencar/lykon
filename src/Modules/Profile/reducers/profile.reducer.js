@@ -6,7 +6,6 @@ import {
   UPDATE_USER_POINTS_SUCCESS,
 } from '../actions/index'
 
-
 // Root Selector
 export const getRoot = (state) => state
 
@@ -32,13 +31,13 @@ const profileReducer = (state = initialState, action) => {
     case FETCH_USER_REQUEST:
       return {
         ...state,
-        loading: true
+        loading: true,
       }
     case FETCH_USER_SUCCESS:
       return {
         ...state,
         currentUser: action.payload,
-        loading: false
+        loading: false,
       }
     case UPDATE_USER_POINTS_REQUEST:
       return {
@@ -47,20 +46,19 @@ const profileReducer = (state = initialState, action) => {
           ...state.currentUser,
           attributes: {
             ...state.currentUser.attributes,
-            points: state.currentUser.attributes.points + action.payload.points
-          }
-        }
+            points: state.currentUser.attributes.points + action.payload.points,
+          },
+        },
       }
 
     case UPDATE_USER_POINTS_SUCCESS:
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
       }
     default:
       return state
   }
 }
-
 
 export default profileReducer

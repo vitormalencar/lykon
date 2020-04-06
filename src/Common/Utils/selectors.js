@@ -13,10 +13,9 @@ export const getChallenges = createSelector(
   ({ myChallenges }) => myChallenges || []
 )
 
-export const getUserReward = createSelector(
-  getChallenges,
-  (challenges) => {
-    const peddingchallenges = challenges.filter(i => i.attributes.complete === false)
-    return peddingchallenges.length <= 0
-  }
-)
+export const getUserReward = createSelector(getChallenges, (challenges) => {
+  const peddingchallenges = challenges.filter(
+    (i) => i.attributes.complete === false
+  )
+  return peddingchallenges.length <= 0
+})

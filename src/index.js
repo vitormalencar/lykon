@@ -13,14 +13,13 @@ import store from './store'
 
 import './index.css'
 
-const Main = () =>
+const Main = () => (
   <Provider store={store}>
     <Router>
-      <AppTemplate>
-        {routeComponents}
-      </AppTemplate>
+      <AppTemplate>{routeComponents}</AppTemplate>
     </Router>
   </Provider>
+)
 
 ReactDOM.render(<Main />, document.getElementById('root'))
 registerServiceWorker()
