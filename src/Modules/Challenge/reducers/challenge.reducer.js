@@ -1,30 +1,28 @@
-// @flow
-import { createSelector } from 'reselect'
+import { createSelector } from "reselect";
 import {
   FETCH_CHALLENGE_REQUEST,
   FETCH_CHALLENGE_SUCCESS,
   UPDATE_CHALLENGE_REQUEST,
   UPDATE_CHALLENGE_SUCCESS
-} from '../actions/index'
-
+} from "../actions/index";
 
 // Root Selector
-export const getRoot = (state) => state
+export const getRoot = state => state;
 
 export const getChallenge = createSelector(
   getRoot,
   ({ challenge }) => challenge || {}
-)
+);
 
 export const getLoadingState = createSelector(
   getChallenge,
   ({ loading }) => loading || false
-)
+);
 
 export const getCurrentChallenge = createSelector(
   getChallenge,
   ({ currentChallenge }) => currentChallenge || {}
-)
+);
 
 const initialState = {
   loading: true,
@@ -44,7 +42,7 @@ const initialState = {
       tags: []
     }
   }
-}
+};
 
 const challengeReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -52,13 +50,13 @@ const challengeReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true
-      }
+      };
     case FETCH_CHALLENGE_SUCCESS:
       return {
         ...state,
         currentChallenge: action.payload,
         loading: false
-      }
+      };
 
     case UPDATE_CHALLENGE_REQUEST:
       return {
@@ -70,7 +68,7 @@ const challengeReducer = (state = initialState, action) => {
             complete: true
           }
         }
-      }
+      };
 
     case UPDATE_CHALLENGE_SUCCESS:
       return {
@@ -78,12 +76,10 @@ const challengeReducer = (state = initialState, action) => {
         currentChallenge: {
           ...action.payload
         }
-
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-
-export default challengeReducer
+export default challengeReducer;

@@ -2,40 +2,41 @@
 
 Lykon PWA . Try the [live demo](https://staging-lykon.surge.sh/).
 
-
 # API:
-  - api created with [json-server](https://github.com/typicode/json-server)
-  - sercvice deployed using [Now](https://zeit.co/now) service
-  - all the schemes available in https://lykon-api.now.sh/
 
+- api created with [json-server](https://github.com/typicode/json-server)
+- sercvice deployed using [Now](https://zeit.co/now) service
+- all the schemes available in https://lykon-api.now.sh/
 
 # Stack:
-  - React
-  - React-Router
-  - Redux
-  - Redux-Thunk as middleware
-  - SW-Precache
-  - Reselect
+
+- React
+- React-Router
+- Redux
+- Redux-Thunk as middleware
+- SW-Precache
+- Reselect
 
 # Features
-  - Code Spliting
-  - async Modules and reduces
-  - Offline Caching (via serviceWorker)
-  - Asset Versioning (aka "cache-busting")
-  - ES2015 (ES6) and ES2016 (ES7) support
-  - Webpack Bundle Analysis (see dashboard)
-  - Hot Module Replacement (HMR) for all files
-  - React's Developer Tools
-  - Lighthouse certified
 
+- Code Spliting
+- async Modules and reduces
+- Offline Caching (via serviceWorker)
+- Asset Versioning (aka "cache-busting")
+- ES2015 (ES6) and ES2016 (ES7) support
+- Webpack Bundle Analysis (see dashboard)
+- Hot Module Replacement (HMR) for all files
+- React's Developer Tools
+- Lighthouse certified
 
 # JS Build files
-  - main.js - 61.45kb 📦
-  - challenge.js - 1.89kb 🚀
-  - main.css - 1.6kb 🚀
 
+- main.js - 61.45kb 📦
+- challenge.js - 1.89kb 🚀
+- main.css - 1.6kb 🚀
 
 # Project Structure
+
 ```
 src
 ├── Common // Aplication common assets
@@ -88,36 +89,32 @@ src
 
 ## Installation
 
-**1. Dowload the zip file  and go to the aplication directory**
+**1. Dowload the zip file and go to the aplication directory**
 
 ```sh
 cd lykon
 ```
 
-
 **2. Install the dependencies:**
 
 ```sh
-yarn
+npm install
 ```
 
 > You're done installing! Now let's get started developing.
 
-
 ## Development Workflow
-
 
 **3. Start a live-reload development server:**
 
 ```sh
-yarn run start
+npm run start
 ```
-
 
 **4. Generate a production build in `./build`:**
 
 ```sh
-yarn run build
+npm run build
 ```
 
 You can now deploy the contents of the `build` directory to production!
